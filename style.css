@@ -319,45 +319,84 @@ header {
   background: linear-gradient(135deg, #0ea5e9 10%, #0f172a 100%);
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(56, 189, 248, 0.10), 0 2px 8px rgba(0,0,0,0.10);
-  margin-bottom: 2rem;
 }
 
 .skills .section-title {
   color: #facc15;
   font-size: 2.2rem;
   margin-bottom: 2rem;
+  text-align: center;
   letter-spacing: 1px;
 }
 
-.skill-list {
+/* Skill bars */
+.skill-bars {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  justify-items: center;
-  align-items: center;
+  margin-bottom: 2rem;
 }
 
-.skill {
+.skill-bar {
   background: #1e293b;
-  color: #38bdf8;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 1.2rem 0;
+  padding: 1rem 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(56, 189, 248, 0.08);
-  width: 100%;
-  text-align: center;
-  transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-  letter-spacing: 0.5px;
 }
 
-.skill:hover {
-  background: linear-gradient(135deg, #38bdf8 60%, #0ea5e9 100%);
-  color: #fff;
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.18), 0 2px 8px rgba(0,0,0,0.12);
+.skill-name {
+  font-weight: 600;
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
+.skill-percent {
+  float: right;
+  font-weight: 600;
+  color: #facc15;
+}
+
+.bar-bg {
+  background: #334155;
+  height: 8px;
+  border-radius: 6px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: #38bdf8;
+  border-radius: 6px;
+  transition: width 1s ease-in-out;
+}
+
+/* Categories */
+.skill-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-categories .category {
+  background: #1e293b;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.08);
+}
+
+.skill-categories h4 {
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+}
+
+.skill-categories p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
 /* ===== PROJECTS ===== */
 .projects {
   padding: 4rem 0;
